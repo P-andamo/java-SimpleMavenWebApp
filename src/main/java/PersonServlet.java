@@ -10,8 +10,11 @@ public class PersonServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
         request.setAttribute("name", "Peter Nikolaev Zahariev");
         request.setAttribute("age", "35");
+        request.setAttribute("work", "Programmer");
         request.getRequestDispatcher("person.jsp").forward(request, response);
     }
 }
